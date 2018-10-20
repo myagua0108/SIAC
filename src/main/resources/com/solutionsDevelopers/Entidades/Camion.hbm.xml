@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Camion" table="camion" catalog="polar" optimistic-lock="version">
+        <id name="ruta" type="string">
+            <column name="ruta" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="placa" type="string">
+            <column name="placa" length="10" not-null="true" />
+        </property>
+        <property name="vaPro" type="int">
+            <column name="va_pro" not-null="true" />
+        </property>
+        <property name="vaPilsen" type="int">
+            <column name="va_pilsen" not-null="true" />
+        </property>
+        <set name="vacioses" table="vacios" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cam_id_ca" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Vacios" />
+        </set>
+        <set name="despachos" table="despacho" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="camion_id_ca" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Despacho" />
+        </set>
+        <set name="clientes" table="cliente" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="camion_ruta" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Cliente" />
+        </set>
+        <set name="gastoses" table="gastos" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="camion_ruta" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Gastos" />
+        </set>
+        <set name="trasladosForCamiSale" table="traslado" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cami_sale" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Traslado" />
+        </set>
+        <set name="trasladosForCamiEntra" table="traslado" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cami_entra" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Traslado" />
+        </set>
+        <set name="almacens" table="almacen" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="camion_id_ca" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Almacen" />
+        </set>
+        <set name="empls" table="empl" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cam_id_ca" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Empl" />
+        </set>
+        <set name="UReceCas" table="u_rece_ca" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="camion_ruta" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.UReceCa" />
+        </set>
+        <set name="devolucions" table="devolucion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="camion_ruta" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Devolucion" />
+        </set>
+    </class>
+</hibernate-mapping>

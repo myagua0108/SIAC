@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Traslado" table="traslado" catalog="polar" optimistic-lock="version">
+        <id name="idtraslado" type="java.lang.Integer">
+            <column name="idtraslado" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="camionByCamiSale" class="com.solutionsDevelopers.Entidades.Camion" fetch="select">
+            <column name="cami_sale" length="20" not-null="true" />
+        </many-to-one>
+        <many-to-one name="camionByCamiEntra" class="com.solutionsDevelopers.Entidades.Camion" fetch="select">
+            <column name="cami_entra" length="20" not-null="true" />
+        </many-to-one>
+        <property name="cantTras" type="int">
+            <column name="cant_tras" not-null="true" />
+        </property>
+        <property name="codP" type="int">
+            <column name="cod_p" not-null="true" />
+        </property>
+        <property name="fecTra" type="date">
+            <column name="fec_tra" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

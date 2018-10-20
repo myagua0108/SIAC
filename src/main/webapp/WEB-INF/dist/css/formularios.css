@@ -1,0 +1,24 @@
+ #success_message{ display: none;}
+
+ .btn_bus{
+
+ position: absolute;
+ left: 710px;
+ top: 137px;
+ }
+.btn_bus_cod{
+
+  position: absolute;
+ left: 710px;
+ top: 185px;
+ }
+.tamano{
+	height:1000px;
+}
+
+.btn_bus_cod_des{
+
+  position: absolute;
+ left: 710px;
+ top: 87px;
+ }

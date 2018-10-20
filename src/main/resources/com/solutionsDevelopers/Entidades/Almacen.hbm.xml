@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Almacen" table="almacen" catalog="polar" optimistic-lock="version">
+        <id name="idAlm" type="java.lang.Integer">
+            <column name="id_alm" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="camion" class="com.solutionsDevelopers.Entidades.Camion" fetch="select">
+            <column name="camion_id_ca" length="20" not-null="true" />
+        </many-to-one>
+        <many-to-one name="producto" class="com.solutionsDevelopers.Entidades.Producto" fetch="select">
+            <column name="prod_cod_pro" not-null="true" />
+        </many-to-one>
+        <property name="cantidad" type="int">
+            <column name="cantidad" not-null="true" />
+        </property>
+        <set name="salidas" table="salida" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="pro_codi_sa" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Salida" />
+        </set>
+        <set name="canAjustes" table="can_ajuste" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="almacen_id_alm" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.CanAjuste" />
+        </set>
+    </class>
+</hibernate-mapping>

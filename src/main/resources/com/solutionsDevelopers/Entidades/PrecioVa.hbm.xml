@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.PrecioVa" table="precio_va" catalog="polar" optimistic-lock="version">
+        <id name="idprecioVa" type="java.lang.Integer">
+            <column name="idprecio_va" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="presenta" class="com.solutionsDevelopers.Entidades.Presenta" fetch="select">
+            <column name="presenta_id_pre" not-null="true" unique="true" />
+        </many-to-one>
+        <property name="cosVa" type="double">
+            <column name="cos_va" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.ConVa" table="con_va" catalog="polar" optimistic-lock="version">
+        <id name="idconVa" type="java.lang.Integer">
+            <column name="idcon_va" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="vacaciones" class="com.solutionsDevelopers.Entidades.Vacaciones" fetch="select">
+            <column name="vacaciones_idvacaciones" not-null="true" />
+        </many-to-one>
+        <property name="conVacol" type="string">
+            <column name="con_vacol" length="100" not-null="true" />
+        </property>
+        <property name="moVa" type="double">
+            <column name="mo_va" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.CanAjuste" table="can_ajuste" catalog="polar" optimistic-lock="version">
+        <id name="idcanAjuste" type="java.lang.Integer">
+            <column name="idcan_ajuste" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="ajuste" class="com.solutionsDevelopers.Entidades.Ajuste" fetch="select">
+            <column name="ajuste_id_ajuste" not-null="true" />
+        </many-to-one>
+        <many-to-one name="almacen" class="com.solutionsDevelopers.Entidades.Almacen" fetch="select">
+            <column name="almacen_id_alm" not-null="true" />
+        </many-to-one>
+        <property name="cantA" type="int">
+            <column name="cant_a" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

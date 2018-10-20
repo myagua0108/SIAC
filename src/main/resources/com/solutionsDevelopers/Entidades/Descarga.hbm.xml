@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Descarga" table="descarga" catalog="polar" optimistic-lock="version">
+        <id name="iddescarga" type="java.lang.Integer">
+            <column name="iddescarga" />
+            <generator class="identity" />
+        </id>
+        <property name="tipoDesc" type="string">
+            <column name="tipo_desc" length="10" not-null="true" />
+        </property>
+        <property name="fechaDescarga" type="date">
+            <column name="fecha_descarga" length="10" not-null="true" />
+        </property>
+        <property name="cantiDesca" type="int">
+            <column name="canti_desca" not-null="true" />
+        </property>
+        <property name="caDescarga" type="string">
+            <column name="ca_descarga" length="10" not-null="true" />
+        </property>
+        <property name="usuDescargo" type="string">
+            <column name="usu_descargo" length="65535" not-null="true" />
+        </property>
+        <property name="moDescargo" type="string">
+            <column name="mo_descargo" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

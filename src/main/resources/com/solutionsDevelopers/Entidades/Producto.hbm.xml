@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Producto" table="producto" catalog="polar" optimistic-lock="version">
+        <id name="codiPro" type="java.lang.Integer">
+            <column name="codi_pro" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="categoria" class="com.solutionsDevelopers.Entidades.Categoria" fetch="select">
+            <column name="cate_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="presenta" class="com.solutionsDevelopers.Entidades.Presenta" fetch="select">
+            <column name="presenta_id_pre" not-null="true" />
+        </many-to-one>
+        <many-to-one name="retorno" class="com.solutionsDevelopers.Entidades.Retorno" fetch="select">
+            <column name="retorno_id_reto" not-null="true" />
+        </many-to-one>
+        <property name="denoPro" type="string">
+            <column name="deno_pro" length="45" not-null="true" />
+        </property>
+        <property name="preDe" type="double">
+            <column name="pre_de" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="preMa" type="double">
+            <column name="pre_ma" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="preCo" type="double">
+            <column name="pre_co" precision="22" scale="0" not-null="true" />
+        </property>
+        <set name="almacens" table="almacen" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="prod_cod_pro" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Almacen" />
+        </set>
+        <set name="entregas" table="entrega" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="producto_codi_pro" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Entrega" />
+        </set>
+        <set name="manuals" table="manual" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="producto_codi_pro" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Manual" />
+        </set>
+    </class>
+</hibernate-mapping>

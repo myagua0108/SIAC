@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Proveedor" table="proveedor" catalog="polar" optimistic-lock="version">
+        <id name="rifPro" type="string">
+            <column name="rif_pro" length="25" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="detalleCon" class="com.solutionsDevelopers.Entidades.DetalleCon" fetch="select">
+            <column name="detalle_con_iddetalle_con" not-null="true" />
+        </many-to-one>
+        <property name="raSoPro" type="string">
+            <column name="ra_so_pro" length="65535" not-null="true" />
+        </property>
+        <property name="telePro" type="string">
+            <column name="tele_pro" length="45" not-null="true" />
+        </property>
+        <property name="direPro" type="string">
+            <column name="dire_pro" length="65535" not-null="true" />
+        </property>
+        <property name="ivaMontoRetenido" type="int">
+            <column name="iva_monto_retenido" not-null="true" />
+        </property>
+        <set name="URePros" table="u_re_pro" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="proveedor_rif_pro" length="25" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.URePro" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Cliente" table="cliente" catalog="polar" optimistic-lock="version">
+        <id name="rif" type="string">
+            <column name="rif" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="camion" class="com.solutionsDevelopers.Entidades.Camion" fetch="select">
+            <column name="camion_ruta" length="20" not-null="true" />
+        </many-to-one>
+        <property name="codigo" type="string">
+            <column name="codigo" length="20" not-null="true" />
+        </property>
+        <property name="raSo" type="string">
+            <column name="ra_so" length="65535" not-null="true" />
+        </property>
+        <property name="direCli" type="string">
+            <column name="dire_cli" length="65535" not-null="true" />
+        </property>
+        <property name="telfCli" type="string">
+            <column name="telf_cli" length="25" not-null="true" />
+        </property>
+        <property name="contCli" type="string">
+            <column name="cont_cli" length="45" not-null="true" />
+        </property>
+        <set name="prestamos" table="prestamo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cliente_rif" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Prestamo" />
+        </set>
+        <set name="despachos" table="despacho" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cliente_rif" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Despacho" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Salida" table="salida" catalog="polar" optimistic-lock="version">
+        <id name="idsalida" type="java.lang.Integer">
+            <column name="idsalida" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="almacen" class="com.solutionsDevelopers.Entidades.Almacen" fetch="select">
+            <column name="pro_codi_sa" not-null="true" />
+        </many-to-one>
+        <many-to-one name="despacho" class="com.solutionsDevelopers.Entidades.Despacho" fetch="select">
+            <column name="despacho_co_desp" not-null="true" />
+        </many-to-one>
+        <property name="cantSale" type="int">
+            <column name="cant_sale" not-null="true" />
+        </property>
+        <property name="precSalePro" type="double">
+            <column name="prec_sale_pro" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

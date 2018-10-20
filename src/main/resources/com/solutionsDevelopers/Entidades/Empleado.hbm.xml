@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Empleado" table="empleado" catalog="polar" optimistic-lock="version">
+        <id name="cedula" type="string">
+            <column name="cedula" length="25" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="cargo" class="com.solutionsDevelopers.Entidades.Cargo" fetch="select">
+            <column name="cargo_idcargo" not-null="true" />
+        </many-to-one>
+        <property name="nombEmp" type="string">
+            <column name="nomb_emp" length="25" not-null="true" />
+        </property>
+        <property name="apeEmp" type="string">
+            <column name="ape_emp" length="25" not-null="true" />
+        </property>
+        <property name="direEmp" type="string">
+            <column name="dire_emp" length="65535" not-null="true" />
+        </property>
+        <property name="telfEmp" type="string">
+            <column name="telf_emp" length="25" not-null="true" />
+        </property>
+        <property name="ingreso" type="date">
+            <column name="ingreso" length="10" not-null="true" />
+        </property>
+        <property name="status" type="boolean">
+            <column name="status" not-null="true" />
+        </property>
+        <set name="ahorros" table="ahorro" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empleado_cedula" length="25" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Ahorro" />
+        </set>
+        <set name="feNos" table="fe_no" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empleado_cedula" length="25" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.FeNo" />
+        </set>
+        <set name="entregaAhorros" table="entrega_ahorro" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empleado_cedula" length="25" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.EntregaAhorro" />
+        </set>
+        <set name="vacacioneses" table="vacaciones" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empleado_cedula" length="25" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Vacaciones" />
+        </set>
+        <set name="vales" table="vale" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empleado_cedula" length="25" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Vale" />
+        </set>
+        <set name="utilidads" table="utilidad" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empleado_cedula" length="25" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Utilidad" />
+        </set>
+        <set name="financiars" table="financiar" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empleado_cedula" length="25" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Financiar" />
+        </set>
+        <set name="sueldos" table="sueldo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empleado_cedula" length="25" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Sueldo" />
+        </set>
+        <set name="prestacioneses" table="prestaciones" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empleado_cedula" length="25" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Prestaciones" />
+        </set>
+        <set name="empls" table="empl" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empleado_cedula" length="25" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Empl" />
+        </set>
+        <set name="liquidars" table="liquidar" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empleado_cedula" length="25" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Liquidar" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -27,6 +27,7 @@
                 <prop key="Menu_Izquierdo_Portal.htm">PortalController</prop>
                 <prop key="Menu_Top_Portal.htm">PortalController</prop>
                 <prop key="Portal.htm">PortalController</prop>
+                <prop key="Plantilla_General.htm">PlantillaController</prop>
             </props>
         </property>
     </bean>
@@ -40,4 +41,5 @@
     <bean name="AdministratorController" class="com.solutionsDevelopers.Controller.AdministratorController" />
     <bean name="LoginController" class="com.solutionsDevelopers.Controller.LoginController" />
     <bean name="PortalController" class="com.solutionsDevelopers.ControllerPortalController" />
+    <bean name="PlantillaController" class="com.solutionsDevelopers.ControllerPlantillaController" />
 </beans>

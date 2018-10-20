@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Carga" table="carga" catalog="polar" optimistic-lock="version">
+        <id name="idcarga" type="java.lang.Integer">
+            <column name="idcarga" />
+            <generator class="identity" />
+        </id>
+        <property name="tipoCargar" type="string">
+            <column name="tipo_cargar" length="10" not-null="true" />
+        </property>
+        <property name="feCar" type="date">
+            <column name="fe_car" length="10" not-null="true" />
+        </property>
+        <property name="CVa" type="int">
+            <column name="c_va" not-null="true" />
+        </property>
+        <property name="camiCa" type="string">
+            <column name="cami_ca" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

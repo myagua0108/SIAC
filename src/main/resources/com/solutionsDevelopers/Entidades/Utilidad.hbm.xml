@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Utilidad" table="utilidad" catalog="polar" optimistic-lock="version">
+        <id name="idutilidad" type="java.lang.Integer">
+            <column name="idutilidad" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="empleado" class="com.solutionsDevelopers.Entidades.Empleado" fetch="select">
+            <column name="empleado_cedula" length="25" not-null="true" />
+        </many-to-one>
+        <property name="fcha" type="date">
+            <column name="fcha" length="10" not-null="true" />
+        </property>
+        <property name="meses" type="int">
+            <column name="meses" not-null="true" />
+        </property>
+        <property name="utilidadcol" type="double">
+            <column name="utilidadcol" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="salaUti" type="double">
+            <column name="sala_uti" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="inces" type="double">
+            <column name="inces" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="pago" type="double">
+            <column name="pago" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

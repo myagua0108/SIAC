@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.DetalleCon" table="detalle_con" catalog="polar" optimistic-lock="version">
+        <id name="iddetalleCon" type="java.lang.Integer">
+            <column name="iddetalle_con" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="concepto" class="com.solutionsDevelopers.Entidades.Concepto" fetch="select">
+            <column name="concepto_idconcepto" not-null="true" />
+        </many-to-one>
+        <property name="deta" type="string">
+            <column name="deta" length="45" not-null="true" />
+        </property>
+        <property name="baseImponible" type="string">
+            <column name="base_imponible" length="20" not-null="true" />
+        </property>
+        <property name="tarifa" type="string">
+            <column name="tarifa" length="20" not-null="true" />
+        </property>
+        <property name="mayor" type="double">
+            <column name="mayor" precision="22" scale="0" not-null="true" />
+        </property>
+        <set name="proveedors" table="proveedor" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="detalle_con_iddetalle_con" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Proveedor" />
+        </set>
+    </class>
+</hibernate-mapping>

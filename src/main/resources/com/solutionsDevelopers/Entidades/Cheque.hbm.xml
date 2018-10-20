@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Cheque" table="cheque" catalog="polar" optimistic-lock="version">
+        <id name="idcheque" type="string">
+            <column name="idcheque" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="despacho" class="com.solutionsDevelopers.Entidades.Despacho" fetch="select">
+            <column name="despacho_co_desp" not-null="true" />
+        </many-to-one>
+        <property name="montoChe" type="double">
+            <column name="monto_che" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="staChe" type="boolean">
+            <column name="sta_che" not-null="true" />
+        </property>
+        <property name="banco" type="string">
+            <column name="banco" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

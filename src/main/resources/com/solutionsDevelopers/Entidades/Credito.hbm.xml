@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Credito" table="credito" catalog="polar" optimistic-lock="version">
+        <id name="idCre" type="java.lang.Integer">
+            <column name="id_cre" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="despacho" class="com.solutionsDevelopers.Entidades.Despacho" fetch="select">
+            <column name="despacho_co_des" not-null="true" />
+        </many-to-one>
+        <property name="staCre" type="boolean">
+            <column name="sta_cre" not-null="true" />
+        </property>
+        <set name="cancels" table="cancel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="credito_id_cre" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Cancel" />
+        </set>
+    </class>
+</hibernate-mapping>

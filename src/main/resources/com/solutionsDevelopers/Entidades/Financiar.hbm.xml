@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Financiar" table="financiar" catalog="polar" optimistic-lock="version">
+        <id name="idFinanza" type="java.lang.Integer">
+            <column name="id_finanza" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="empleado" class="com.solutionsDevelopers.Entidades.Empleado" fetch="select">
+            <column name="empleado_cedula" length="25" not-null="true" />
+        </many-to-one>
+        <property name="desFi" type="string">
+            <column name="des_fi" length="45" not-null="true" />
+        </property>
+        <property name="costoFi" type="double">
+            <column name="costo_fi" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="cuotas" type="double">
+            <column name="cuotas" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="nroCuotas" type="int">
+            <column name="nro_cuotas" not-null="true" />
+        </property>
+        <property name="feFi" type="date">
+            <column name="fe_fi" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

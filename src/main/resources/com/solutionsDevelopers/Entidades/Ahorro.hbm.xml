@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Ahorro" table="ahorro" catalog="polar" optimistic-lock="version">
+        <id name="idahorro" type="java.lang.Integer">
+            <column name="idahorro" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="empleado" class="com.solutionsDevelopers.Entidades.Empleado" fetch="select">
+            <column name="empleado_cedula" length="25" not-null="true" />
+        </many-to-one>
+        <property name="semana" type="string">
+            <column name="semana" length="45" not-null="true" />
+        </property>
+        <property name="caja" type="int">
+            <column name="caja" not-null="true" />
+        </property>
+        <property name="porCaja" type="double">
+            <column name="por_caja" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="porAhorro" type="double">
+            <column name="por_ahorro" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="porAporte" type="double">
+            <column name="por_aporte" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="ahoTra" type="double">
+            <column name="aho_tra" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="totalAho" type="double">
+            <column name="total_aho" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="deposito" type="double">
+            <column name="deposito" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

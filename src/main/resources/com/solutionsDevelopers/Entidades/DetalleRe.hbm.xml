@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.DetalleRe" table="detalle_re" catalog="polar" optimistic-lock="version">
+        <id name="iddetalleRe" type="java.lang.Integer">
+            <column name="iddetalle_re" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="devRece" class="com.solutionsDevelopers.Entidades.DevRece" fetch="select">
+            <column name="dev_rece_iddev_rece" not-null="true" />
+        </many-to-one>
+        <property name="proRev" type="string">
+            <column name="pro_rev" length="45" not-null="true" />
+        </property>
+        <property name="canRev" type="string">
+            <column name="can_rev" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

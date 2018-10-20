@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Gastos" table="gastos" catalog="polar" optimistic-lock="version">
+        <id name="idgastos" type="java.lang.Integer">
+            <column name="idgastos" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="camion" class="com.solutionsDevelopers.Entidades.Camion" fetch="select">
+            <column name="camion_ruta" length="20" not-null="true" />
+        </many-to-one>
+        <property name="toGa" type="double">
+            <column name="to_ga" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="45" not-null="true" />
+        </property>
+        <property name="fechaGa" type="date">
+            <column name="fecha_ga" length="10" not-null="true" />
+        </property>
+        <property name="nroFacGa" type="string">
+            <column name="nro_fac_ga" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

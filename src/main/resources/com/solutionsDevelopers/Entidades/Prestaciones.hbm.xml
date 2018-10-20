@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Prestaciones" table="prestaciones" catalog="polar" optimistic-lock="version">
+        <id name="idprestaciones" type="java.lang.Integer">
+            <column name="idprestaciones" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="empleado" class="com.solutionsDevelopers.Entidades.Empleado" fetch="select">
+            <column name="empleado_cedula" length="25" not-null="true" />
+        </many-to-one>
+        <property name="periodo" type="string">
+            <column name="periodo" length="45" not-null="true" />
+        </property>
+        <property name="diAbo" type="string">
+            <column name="di_abo" length="45" not-null="true" />
+        </property>
+        <property name="diaAdi" type="string">
+            <column name="dia_adi" length="45" not-null="true" />
+        </property>
+        <property name="TInte" type="string">
+            <column name="t_inte" length="45" not-null="true" />
+        </property>
+        <property name="fechaAbono" type="date">
+            <column name="fecha_abono" length="10" not-null="true" />
+        </property>
+        <property name="adelanto" type="double">
+            <column name="adelanto" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="adelantoInt" type="double">
+            <column name="adelanto_int" precision="22" scale="0" not-null="true" />
+        </property>
+        <set name="detalleAdes" table="detalle_ade" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="prestaciones_idprestaciones" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.DetalleAde" />
+        </set>
+    </class>
+</hibernate-mapping>

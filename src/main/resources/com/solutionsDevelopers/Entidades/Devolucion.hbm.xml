@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Devolucion" table="devolucion" catalog="polar" optimistic-lock="version">
+        <id name="idDevo" type="string">
+            <column name="id_devo" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="camion" class="com.solutionsDevelopers.Entidades.Camion" fetch="select">
+            <column name="camion_ruta" length="20" not-null="true" />
+        </many-to-one>
+        <property name="retorno" type="int">
+            <column name="retorno" not-null="true" />
+        </property>
+        <property name="fecDevo" type="date">
+            <column name="fec_devo" length="10" not-null="true" />
+        </property>
+        <property name="retoTe" type="int">
+            <column name="reto_te" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

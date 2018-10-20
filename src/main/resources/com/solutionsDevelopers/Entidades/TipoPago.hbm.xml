@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.TipoPago" table="tipo_pago" catalog="polar" optimistic-lock="version">
+        <id name="idtipoPago" type="java.lang.Integer">
+            <column name="idtipo_pago" />
+            <generator class="identity" />
+        </id>
+        <property name="tipoP" type="string">
+            <column name="tipo_p" length="45" not-null="true" unique="true" />
+        </property>
+        <set name="cancels" table="cancel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tpa" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Cancel" />
+        </set>
+        <set name="facturas" table="factura" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tipo_pago_idtipo_pago" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Factura" />
+        </set>
+    </class>
+</hibernate-mapping>

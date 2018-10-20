@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.UReceCa" table="u_rece_ca" catalog="polar" optimistic-lock="version">
+        <id name="iduReceCa" type="java.lang.Integer">
+            <column name="idu_rece_ca" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="camion" class="com.solutionsDevelopers.Entidades.Camion" fetch="select">
+            <column name="camion_ruta" length="20" not-null="true" />
+        </many-to-one>
+        <many-to-one name="recepcion" class="com.solutionsDevelopers.Entidades.Recepcion" fetch="select">
+            <column name="recepcion_nro_control" length="20" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

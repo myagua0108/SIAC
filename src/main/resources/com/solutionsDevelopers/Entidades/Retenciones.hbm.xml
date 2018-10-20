@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Retenciones" table="retenciones" catalog="polar" optimistic-lock="version">
+        <id name="idretenciones" type="java.lang.Integer">
+            <column name="idretenciones" />
+            <generator class="identity" />
+        </id>
+        <property name="baseImponible" type="double">
+            <column name="base_imponible" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="montoRetenido" type="double">
+            <column name="monto_retenido" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="fechaRete" type="date">
+            <column name="fecha_rete" length="10" not-null="true" />
+        </property>
+        <set name="uniReIvas" table="uni_re_iva" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="retenciones_idretenciones" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.UniReIva" />
+        </set>
+        <set name="uniRetes" table="uni_rete" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="retenciones_idretenciones" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.UniRete" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Despacho" table="despacho" catalog="polar" optimistic-lock="version">
+        <id name="coDesp" type="java.lang.Integer">
+            <column name="co_desp" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="camion" class="com.solutionsDevelopers.Entidades.Camion" fetch="select">
+            <column name="camion_id_ca" length="20" not-null="true" />
+        </many-to-one>
+        <many-to-one name="cliente" class="com.solutionsDevelopers.Entidades.Cliente" fetch="select">
+            <column name="cliente_rif" length="20" not-null="true" />
+        </many-to-one>
+        <property name="fechaDes" type="date">
+            <column name="fecha_des" length="10" not-null="true" />
+        </property>
+        <property name="montoDes" type="int">
+            <column name="monto_des" not-null="true" />
+        </property>
+        <property name="nroFac" type="string">
+            <column name="nro_fac" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="nroCon" type="string">
+            <column name="nro_con" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="facturar" type="int">
+            <column name="facturar" not-null="true" />
+        </property>
+        <set name="cheques" table="cheque" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="despacho_co_desp" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Cheque" />
+        </set>
+        <set name="facturas" table="factura" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="despacho_co_desp" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Factura" />
+        </set>
+        <set name="salidas" table="salida" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="despacho_co_desp" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Salida" />
+        </set>
+        <set name="pagoses" table="pagos" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="desp_co_desp" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Pagos" />
+        </set>
+        <set name="creditos" table="credito" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="despacho_co_des" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Credito" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Recepcion" table="recepcion" catalog="polar" optimistic-lock="version">
+        <id name="nroControl" type="string">
+            <column name="nro_control" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="staPaRecep" type="boolean">
+            <column name="sta_pa_recep" not-null="true" />
+        </property>
+        <property name="fechaRece" type="date">
+            <column name="fecha_rece" length="10" not-null="true" />
+        </property>
+        <property name="nroFactura" type="string">
+            <column name="nro_factura" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="montoRe" type="double">
+            <column name="monto_re" precision="22" scale="0" not-null="true" />
+        </property>
+        <set name="proComs" table="pro_com" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="recepcion_nro_control" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.ProCom" />
+        </set>
+        <set name="entregas" table="entrega" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="recepcion_nro_control" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Entrega" />
+        </set>
+        <set name="uniReIvas" table="uni_re_iva" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="recepcion_nro_control" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.UniReIva" />
+        </set>
+        <set name="UReceCas" table="u_rece_ca" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="recepcion_nro_control" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.UReceCa" />
+        </set>
+        <set name="URePros" table="u_re_pro" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="recepcion_nro_control" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.URePro" />
+        </set>
+        <set name="uniRetes" table="uni_rete" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="recepcion_nro_control" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.UniRete" />
+        </set>
+        <set name="fidePolars" table="fide_polar" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="recepcion_nro_control" length="20" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.FidePolar" />
+        </set>
+    </class>
+</hibernate-mapping>

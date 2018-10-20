@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.UniRete" table="uni_rete" catalog="polar" optimistic-lock="version">
+        <id name="reteIslr" type="java.lang.Integer">
+            <column name="rete_islr" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="recepcion" class="com.solutionsDevelopers.Entidades.Recepcion" fetch="select">
+            <column name="recepcion_nro_control" length="20" not-null="true" />
+        </many-to-one>
+        <many-to-one name="retenciones" class="com.solutionsDevelopers.Entidades.Retenciones" fetch="select">
+            <column name="retenciones_idretenciones" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

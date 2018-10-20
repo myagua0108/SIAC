@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Can" table="can" catalog="polar" optimistic-lock="version">
+        <id name="idcan" type="java.lang.Integer">
+            <column name="idcan" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="devolucionDes" class="com.solutionsDevelopers.Entidades.DevolucionDes" fetch="select">
+            <column name="devolucion_iddevolucion" not-null="true" />
+        </many-to-one>
+        <property name="proDe" type="string">
+            <column name="pro_de" length="45" not-null="true" />
+        </property>
+        <property name="canDe" type="string">
+            <column name="can_de" length="45" not-null="true" />
+        </property>
+        <property name="preDevo" type="string">
+            <column name="pre_devo" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

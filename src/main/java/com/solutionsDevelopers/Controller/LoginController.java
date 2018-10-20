@@ -6,6 +6,7 @@
 package com.solutionsDevelopers.Controller;
 
 import com.solutionsDevelopers.ValidatorModels.LoginValidator;
+import com.solutionsDevelopers.Entidades.*;
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.ui.Model;
@@ -32,7 +33,7 @@ public class LoginController {
        @RequestMapping(method = RequestMethod.GET)
     public ModelAndView Login() {
         ModelAndView mav = new ModelAndView();
-//        mav.addObject("Usuarios", new Usuarios());
+        mav.addObject("Seguridad", new Seguridad());
         mav.setViewName("Login/Login");
         return mav;
     }

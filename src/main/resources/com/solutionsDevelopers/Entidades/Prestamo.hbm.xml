@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Prestamo" table="prestamo" catalog="polar" optimistic-lock="version">
+        <id name="idprestamo" type="java.lang.Integer">
+            <column name="idprestamo" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="cliente" class="com.solutionsDevelopers.Entidades.Cliente" fetch="select">
+            <column name="cliente_rif" length="20" not-null="true" />
+        </many-to-one>
+        <property name="cantPres" type="int">
+            <column name="cant_pres" not-null="true" />
+        </property>
+        <property name="cantPresTe" type="int">
+            <column name="cant_pres_te" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

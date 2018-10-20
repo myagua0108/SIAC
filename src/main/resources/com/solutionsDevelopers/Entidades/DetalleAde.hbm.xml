@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.DetalleAde" table="detalle_ade" catalog="polar" optimistic-lock="version">
+        <id name="iddetalleAde" type="java.lang.Integer">
+            <column name="iddetalle_ade" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="prestaciones" class="com.solutionsDevelopers.Entidades.Prestaciones" fetch="select">
+            <column name="prestaciones_idprestaciones" not-null="true" />
+        </many-to-one>
+        <property name="motivo" type="string">
+            <column name="motivo" length="45" not-null="true" />
+        </property>
+        <property name="porcentaje" type="string">
+            <column name="porcentaje" length="45" not-null="true" />
+        </property>
+        <property name="fecAdelanto" type="date">
+            <column name="fec_adelanto" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

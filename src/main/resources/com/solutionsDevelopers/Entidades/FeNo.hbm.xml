@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.FeNo" table="fe_no" catalog="polar" optimistic-lock="version">
+        <id name="idfeNo" type="java.lang.Integer">
+            <column name="idfe_no" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="empleado" class="com.solutionsDevelopers.Entidades.Empleado" fetch="select">
+            <column name="empleado_cedula" length="25" not-null="true" />
+        </many-to-one>
+        <property name="feDesde" type="string">
+            <column name="fe_desde" length="10" not-null="true" />
+        </property>
+        <property name="feHasta" type="string">
+            <column name="fe_hasta" length="10" not-null="true" />
+        </property>
+        <property name="feNomina" type="string">
+            <column name="fe_nomina" length="10" not-null="true" />
+        </property>
+        <set name="comisions" table="comision" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fe_no_idfe_no" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Comision" />
+        </set>
+        <set name="nominas" table="nomina" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fe_no_idfe_no" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Nomina" />
+        </set>
+        <set name="deduccioneses" table="deducciones" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fe_no_idfe_no" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.Deducciones" />
+        </set>
+    </class>
+</hibernate-mapping>

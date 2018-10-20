@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Comision" table="comision" catalog="polar" optimistic-lock="version">
+        <id name="idcomision" type="java.lang.Integer">
+            <column name="idcomision" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="feNo" class="com.solutionsDevelopers.Entidades.FeNo" fetch="select">
+            <column name="fe_no_idfe_no" not-null="true" />
+        </many-to-one>
+        <property name="com" type="string">
+            <column name="com_" length="45" not-null="true" />
+        </property>
+        <property name="coD" type="double">
+            <column name="co_d" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

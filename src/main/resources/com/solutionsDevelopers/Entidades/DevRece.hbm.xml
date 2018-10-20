@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.DevRece" table="dev_rece" catalog="polar" optimistic-lock="version">
+        <id name="iddevRece" type="java.lang.Integer">
+            <column name="iddev_rece" />
+            <generator class="identity" />
+        </id>
+        <property name="codRe" type="string">
+            <column name="cod_re" length="45" not-null="true" />
+        </property>
+        <property name="camRe" type="string">
+            <column name="cam_re" length="45" not-null="true" />
+        </property>
+        <property name="feDevRe" type="string">
+            <column name="fe_dev_re" length="45" not-null="true" />
+        </property>
+        <property name="usuDevRe" type="string">
+            <column name="usu_dev_re" length="45" not-null="true" />
+        </property>
+        <set name="detalleRes" table="detalle_re" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="dev_rece_iddev_rece" not-null="true" />
+            </key>
+            <one-to-many class="com.solutionsDevelopers.Entidades.DetalleRe" />
+        </set>
+    </class>
+</hibernate-mapping>

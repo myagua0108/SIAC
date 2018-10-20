@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/10/2018 09:47:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.solutionsDevelopers.Entidades.Entrega" table="entrega" catalog="polar" optimistic-lock="version">
+        <id name="identrega" type="java.lang.Integer">
+            <column name="identrega" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="producto" class="com.solutionsDevelopers.Entidades.Producto" fetch="select">
+            <column name="producto_codi_pro" not-null="true" />
+        </many-to-one>
+        <many-to-one name="recepcion" class="com.solutionsDevelopers.Entidades.Recepcion" fetch="select">
+            <column name="recepcion_nro_control" length="20" not-null="true" />
+        </many-to-one>
+        <property name="cantEntra" type="int">
+            <column name="cant_entra" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
