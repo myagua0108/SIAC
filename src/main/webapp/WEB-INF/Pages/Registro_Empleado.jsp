@@ -60,7 +60,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="Cedula" placeholder="Cédula" class="form-control"  type="text">
+  <input  path="cedula" placeholder="Cédula" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -75,7 +75,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="Nombre" placeholder="Nombre" class="form-control"  type="text">
+  <input name="nombemp" placeholder="Nombre" class="form-control"  type="text">
     </div>
   </div>
 </div>

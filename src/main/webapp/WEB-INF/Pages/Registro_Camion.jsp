@@ -60,7 +60,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="Ruta" placeholder="Ruta" class="form-control"  type="text">
+  <input  path="ruta" placeholder="Ruta" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -74,7 +74,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="Placa" placeholder="Placa" class="form-control"  type="text">
+  <input  path="placa" placeholder="Placa" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -86,7 +86,7 @@
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="Chofer" class="form-control selectpicker" >
+    <select path="empls" class="form-control selectpicker" >
       <option value=" " >Seleccione Chofer</option>
       <option>1</option>
     </select>
@@ -102,7 +102,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="Pilsen" placeholder="Pilsen" class="form-control"  type="text">
+  <input  path="va_pilsen" placeholder="Pilsen" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -115,26 +115,12 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="Tercio" placeholder="Tercio" class="form-control" type="text">
+  <input path="va_pro" placeholder="Tercio" class="form-control" type="text">
     </div>
   </div>
 </div>
 
 
-
-
-
-<!-- Text area -->
-  
-<div class="form-group">
-  <label class="col-md-4 control-label">Dirección:</label>
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-          <textarea class="form-control" name="comment" placeholder="Dirección...."></textarea>
-  </div>
-  </div>
-</div>
 <!-- Button -->
 <div class="col-md-6">
   <label class="col-md-4 control-label"></label>

@@ -60,7 +60,7 @@
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="Presentacion" class="form-control selectpicker" >
+    <select path="presenta" class="form-control selectpicker" >
       <option value=" " >Seleccione Presentación</option>
       <option>1</option>
     </select>
@@ -76,7 +76,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="costo" placeholder="Costo" class="form-control"  type="text">
+  <input  path="cosVa" placeholder="Costo" class="form-control"  type="text">
     </div>
   </div>
 </div>

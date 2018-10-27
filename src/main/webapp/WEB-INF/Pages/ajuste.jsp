@@ -60,7 +60,7 @@
     <div class="col-md-9 selectContainer">
     <div class="input-group">
         
-    <select name="Camion" class="form-control selectpicker" >
+    <select name="camion_id_ca" class="form-control selectpicker" >
       <option value=" " >Seleccione Camión</option>
       <option>1</option>
     </select>
@@ -75,7 +75,7 @@
     <div class="col-md-9 selectContainer">
     <div class="input-group">
         
-    <select name="Empleado" class="form-control selectpicker" >
+    <select name="empleado" class="form-control selectpicker" >
       <option value=" " >Seleccione Empleado</option>
       <option>1</option>
     </select>

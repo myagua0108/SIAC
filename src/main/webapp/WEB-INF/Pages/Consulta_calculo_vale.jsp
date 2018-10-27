@@ -37,135 +37,170 @@
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="tamano hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
+
 <jsp:include page="Encabezado_menu.jsp" flush="true" /> 
 <section>
   
-  <div class="container">
+  <div class="container ">
     <div class="row col-md-12">
 
     <form class="well form-horizontal" action=" " method="post"  id="contact_form">
 
 <fieldset class="main-footer">
  
-    <div class="pull-right hidden-xs">
+    <div class=" col-md-12 pull-right hidden-xs">
 <!-- Form Name -->
-<legend>Registro de Clientes</legend>
-
-<!-- Text input-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label">RIF:</label>  
-  <div class="col-md-4 inputGroupContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  path="rif" placeholder="Rif" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
-
-
-
-<!-- Text input-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label">Código:</label>  
-  <div class="col-md-4 inputGroupContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  path="codigo" placeholder="Código" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
-
-<!-- Text input-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label">Razón Social:</label>  
-  <div class="col-md-4 inputGroupContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  path="raSo" placeholder="Razón Social" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
-
-
-<!-- Text input-->
-       
-<div class="form-group">
-  <label class="col-md-4 control-label">Teléfono:</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input path="telfCli" placeholder="Teléfono" class="form-control" type="text">
-    </div>
-  </div>
-</div>
-
-
-<!-- Text input-->
-       
-<div class="form-group">
-  <label class="col-md-4 control-label">Contacto:</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input path="contCli" placeholder="Contacto" class="form-control" type="text">
-    </div>
-  </div>
-</div>
-
+<legend>Calculo de Vale</legend>
+<div class="row ">
+            
 <!-- Select ruta -->
    
-<div class="form-group"> 
-  <label class="col-md-4 control-label">Ruta:</label>
+<div class="col-md-12"> 
+  <label class="col-md-4 control-label">Trabajador:</label>
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select path="ruta" class="form-control selectpicker" >
-      <option value=" " >Seleccione Ruta</option>
+    <select name="Trabajador" class="form-control selectpicker" >
+      <option value=" " >Seleccione Trabajador</option>
       <option>1</option>
     </select>
   </div>
 </div>
 </div>
 
+<br>
+<br>
+<br>
 
-<!-- Text area -->
-  
-<div class="form-group">
-  <label class="col-md-4 control-label">Dirección:</label>
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-          <textarea class="form-control" path="direCli" placeholder="Dirección...."></textarea>
-  </div>
+            <!-- Text input-->
+ <div class="col-md-6">
+
+  <label class="col-md-4 control-label">Desde:</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+ 
+  <input  name="desde" placeholder="dd/mm/aaaa" class="form-control"  type="date">
+    </div>
   </div>
 </div>
+
+
+            <!-- Text input-->
+ <div class="col-md-6">
+
+  <label class="col-md-4 control-label">Hasta:</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+ 
+  <input  name="hasta" placeholder="dd/mm/aaaa" class="form-control"  type="date">
+    </div>
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+
+<div class="row">
+        <div class="col-md-12">
+          <div class="box">
+           
+            <!-- /.box-header -->
+            <div class=" box-body table-responsive no-padding">
+              <table class="table table-hover">
+                <tr>
+                  <th>Código</th>
+                  <th>Denominacion Comercial</th>
+                  <th>P. Costo</th>
+                  <th>P. Mayor</th>
+                  <th>P. Detal</th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+              </table>
+                 
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+
+  </div>
+<br>
+
+
+<br>
+
+<br>
+
+            <!-- Text input-->
+ <div class="col-md-12">
+
+  <label class="col-md-4 control-label">Total:</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+ 
+  <input  name="Total" placeholder="0" disabled="true" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+<br>
+
+
+<br>
+
+<br>
+
 
 <!-- Button -->
 <div class="col-md-6">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4">
-    <button type="submit" class="btn btn-info" >Modificar</button>
+    <button type="button" class="btn btn-info" >Exportar</button>
   </div>
 
 </div>
+
 
 <!-- Button -->
 <div class="col-md-6">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4">
-    <button type="submit" class="btn btn-warning" >Guardar <span class="glyphicon glyphicon-send"></span></button>
+    <button type="button" class="btn btn-success  " >Procesar</button>
   </div>
 
 </div>
-
-
-
-
 
 </div>
 </fieldset>
@@ -173,18 +208,9 @@
 </div>
 </div>
  
-<!-- boton de buscar rif-->
-
-  <button type="button" class="btn_bus btn btn-primary" >Buscar</button> 
-
-<!-- boton de buscar codigo-->
-
-  <button type="button" class="btn_bus_cod btn btn-primary" >Buscar</button> 
-
     </div><!-- /.container -->
 
 </section>
-
     <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->

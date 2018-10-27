@@ -60,7 +60,7 @@
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="Presentacion" class="form-control selectpicker" >
+    <select name="camion" class="form-control selectpicker" >
       <option value=" " >...</option>
       <option>1</option>
     </select>

@@ -37,12 +37,11 @@
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="tamano hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-
-    <jsp:include page="Encabezado_menu.jsp" flush="true" /> 
-
+<jsp:include page="Encabezado_menu.jsp" flush="true" /> 
 <section>
+  
   <div class="container ">
     <div class="row col-md-12">
 
@@ -52,28 +51,128 @@
  
     <div class=" col-md-12 pull-right hidden-xs">
 <!-- Form Name -->
-<legend>Consulta de Creditos</legend>
+<legend>Vacaciones</legend>
 <div class="row ">
-            <div class="col-md-12">
-
-              <div class="form-group"> 
-  <label class="col-md-4 control-label">Seleccione Camión:</label>
-    <div class="col-md-4 selectContainer">
+            
+<!-- Select ruta -->
+   
+<div class="col-md-6"> 
+  <label class="col-md-3 control-label">Empleado:</label>
+    <div class="col-md-9 selectContainer">
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="camion" class="form-control selectpicker" >
-      <option value=" " >...</option>
+        
+    <select name="Empleado" class="form-control selectpicker" >
+      <option value=" " >Seleccione Empleado</option>
       <option>1</option>
     </select>
   </div>
 </div>
 </div>
+
+<!-- Button -->
+<div class="col-md-6">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="button" class="btn btn-info" >Buscar</button>
   </div>
 
-  <div class="col-md-12">
+</div>
+
+<br>
+<br>
+<br>
+
+
+            <!-- Text input-->
+ <div class="col-md-4">
+
+  <label class="col-md-4 control-label">Nombre:</label>  
+  <div class="col-md-8 inputGroupContainer">
+  <div class="input-group">
+ 
+  <input  name="Nombre" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+            <!-- Text input-->
+ <div class="col-md-4">
+
+  <label class="col-md-4 control-label">Apellido:</label>  
+  <div class="col-md-8 inputGroupContainer">
+  <div class="input-group">
+ 
+  <input  name="Apellido" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+ <div class="col-md-4">
+
+  <label class="col-md-4 control-label">Cedula:</label>  
+  <div class="col-md-8 inputGroupContainer">
+  <div class="input-group">
+ 
+  <input  name="Cedula" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<!-- Text input-->
+ <div class="col-md-4">
+
+  <label class="col-md-4 control-label">Concepto:</label>  
+  <div class="col-md-8 inputGroupContainer">
+  <div class="input-group">
+ 
+  <input  name="Concepto" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+
+
+            <!-- Text input-->
+ <div class="col-md-4">
+
+<label class="col-md-4 control-label">Monto:</label>  
+  <div class="col-md-8 inputGroupContainer">
+  <div class="input-group">
+ 
+  <input  name="Monto" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+        <!-- Text input-->
+ <div class="col-md-4">
+
+  <label class="col-md-4 control-label">Nro Cuotas:</label>  
+  <div class="col-md-8 inputGroupContainer">
+  <div class="input-group">
+ 
+  <input  name="Cargo" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<div class="row">
+        <div class="col-md-12">
           <div class="box">
            
-
             <!-- /.box-header -->
             <div class=" box-body table-responsive no-padding">
               <table class="table table-hover">
@@ -117,35 +216,51 @@
                  
             </div>
             <!-- /.box-body -->
-            </div>
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+
+  </div>
+<br>
+
+
+<br>
+
+<br>
+
+            <!-- Text input-->
+ <div class="col-md-12">
+
+  <label class="col-md-4 control-label">Total:</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+ 
+  <input  name="Total" placeholder="0" disabled="true" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+<br>
+
+
+<br>
+
+<br>
+
+
 
 <!-- Button -->
-<div class="col-md-4">
+<div class="form-group">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4">
-    <button type="button" class="btn btn-info" >Exportar</button>
+    <button type="button" class="btn btn-success">Procesar</button>
   </div>
 
 </div>
 
-<!-- Button -->
-<div class="col-md-4">
-  <label class="col-md-4 control-label"></label>
-  <div class="col-md-4">
-    <button type="submit" class="btn btn-warning" >Procesar <span class="glyphicon glyphicon-send"></span></button>
   </div>
 
 </div>
-
-<!-- Button -->
-<div class="col-md-4">
-  <label class="col-md-4 control-label"></label>
-  <div class="col-md-4">
-    <button type="submit" class="btn btn-success" >Pagar Crédito </button>
-  </div>
-
-</div>
-
 
 </div>
 </fieldset>

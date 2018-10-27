@@ -60,7 +60,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="Denominacion_comercial" placeholder="Denominación_comercial" class="form-control"  type="text">
+  <input  path="denoPro" placeholder="Denominación_comercial" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -73,7 +73,7 @@
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="categoria" class="form-control selectpicker" >
+    <select path="categoria" class="form-control selectpicker" >
       <option value=" " >Seleccione Categoria</option>
       <option>1</option>
     </select>
@@ -89,7 +89,7 @@
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="Presentacion" class="form-control selectpicker" >
+    <select paths="presenta" class="form-control selectpicker" >
       <option value=" " >Seleccione Presentación</option>
       <option>1</option>
     </select>
@@ -105,8 +105,8 @@
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="Material" class="form-control selectpicker" >
-      <option value=" " >Seleccione Material</option>
+    <select path="retorno" class="form-control selectpicker" >
+      <option value=" " >Retornable</option>
       <option>1</option>
     </select>
   </div>
@@ -119,7 +119,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="Precio_costo" placeholder="Precio_costo" class="form-control"  type="text">
+  <input path="preCo" placeholder="Precio_costo" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -130,7 +130,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="Precio_Mayor" placeholder="Precio_Mayor" class="form-control"  type="text">
+  <input path="preMa" placeholder="Precio_Mayor" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -143,7 +143,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="Precio_Detal" placeholder="Precio_Detal" class="form-control" type="text">
+  <input path="preDe" placeholder="Precio_Detal" class="form-control" type="text">
     </div>
   </div>
 </div>

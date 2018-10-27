@@ -60,7 +60,7 @@
     <div class="col-md-5 selectContainer">
     <div class="input-group">
         
-    <select name="Presentacion" class="form-control selectpicker" >
+    <select name="camion" class="form-control selectpicker" >
       <option value=" " >...</option>
       <option>1</option>
     </select>
