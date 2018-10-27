@@ -3,6 +3,7 @@
  */
 package com.solutionsDevelopers.ValidatorModels;
 
+import com.solutionsDevelopers.Entidades.Seguridad;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.validator.ValidatorException;
@@ -21,15 +22,15 @@ public class LoginValidator implements Validator  {
     }
     
         public void validate(Object o, Errors errors) {
-      //  Usuarios usuarios = (Usuarios) o;
+            Seguridad usuarios = (Seguridad) o;
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nomIdUsuario",
-                "required.nomIdUsuario",
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "usuario",
+                "required.usuario",
                 "Debe Ingresar el Usuario."
         );
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "contrasena",
-                "required.contrasena",
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "contra",
+                "required.contra",
                 "Debe Ingresar la Contraseña."
         );
         

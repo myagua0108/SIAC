@@ -20,10 +20,10 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p>&copy; 2017 WepaSoft.</p>
+            <p>&copy; 2018 Manuel Yagua.</p>
           </div>
           <div class="col-sm-6">
-            <p class="pull-right">Creado Por: <a href="#">WepaSoft, S.A</a></p>
+            <p class="pull-right">Creado Por: <a href="#">Manuel Yagua</a></p>
           </div>
         </div>
       </div>

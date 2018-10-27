@@ -3,9 +3,9 @@
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(${pageContext.request.contextPath}/public/Inicio/images/slider/1.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">Bienvenido a <span>Banco de Neverland</span></h1>
-            <p class="animated fadeInRightBig">El Banco de tu Confianza</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="login.htm">Iniciar</a>
+            <h1 class="animated fadeInLeftBig">Bienvenido a <span>SIAC</span></h1>
+            <p class="animated fadeInRightBig">Tu Sistema Administrativo de Confianza</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="Login.htm">Iniciar</a>
           </div>
         </div>
       </div>
