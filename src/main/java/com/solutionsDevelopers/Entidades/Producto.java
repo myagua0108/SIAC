@@ -19,11 +19,28 @@ public class Producto  implements java.io.Serializable {
      private double preDe;
      private double preMa;
      private double preCo;
+     private int cate_id;
+     private int retornoIdReto;
+     private int presentaIdPre;
      private Set almacens = new HashSet(0);
      private Set entregas = new HashSet(0);
      private Set manuals = new HashSet(0);
 
     public Producto() {
+    }
+
+    public Producto(Integer codiPro, Categoria categoria, Presenta presenta, Retorno retorno, String denoPro, double preDe, double preMa, double preCo, int cate_id, int retornoIdReto, int presentaIdPre) {
+        this.codiPro = codiPro;
+        this.categoria = categoria;
+        this.presenta = presenta;
+        this.retorno = retorno;
+        this.denoPro = denoPro;
+        this.preDe = preDe;
+        this.preMa = preMa;
+        this.preCo = preCo;
+        this.cate_id = cate_id;
+        this.retornoIdReto = retornoIdReto;
+        this.presentaIdPre = presentaIdPre;
     }
 
 	
@@ -125,6 +142,31 @@ public class Producto  implements java.io.Serializable {
     
     public void setManuals(Set manuals) {
         this.manuals = manuals;
+    }
+
+  
+    public int getRetornoIdReto() {
+        return retornoIdReto;
+    }
+
+    public void setRetornoIdReto(int retornoIdReto) {
+        this.retornoIdReto = retornoIdReto;
+    }
+
+    public int getPresentaIdPre() {
+        return presentaIdPre;
+    }
+
+    public void setPresentaIdPre(int presentaIdPre) {
+        this.presentaIdPre = presentaIdPre;
+    }
+
+    public int getCate_id() {
+        return cate_id;
+    }
+
+    public void setCate_id(int cate_id) {
+        this.cate_id = cate_id;
     }
 
 

@@ -1,7 +1,7 @@
 <header id="home">
     <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
-        <div class="item active" style="background-image: url(${pageContext.request.contextPath}/public/Inicio/images/slider/1.jpg)">
+        <div class="item active" style="background-image: url(${pageContext.request.contextPath}/Public/Inicio/images/slider/1.jpg)">
           <div class="caption">
             <h1 class="animated fadeInLeftBig">Bienvenido a <span>SIAC</span></h1>
             <p class="animated fadeInRightBig">Tu Sistema Administrativo de Confianza</p>

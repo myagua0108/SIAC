@@ -1,6 +1,6 @@
 package com.solutionsDevelopers.DAL;
 
-import com.solutionsDevelopers.Entidades.Seguridad;
+import com.solutionsDevelopers.Entidades.*;
 import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -70,8 +70,18 @@ public class MetodosHQL {
         query.setString("user", usuarios.getUsuario());
         query.setString("contra", usuarios.getContra());
         seguridad = (Seguridad) query.uniqueResult();
-        terminaOperacion();
+        this.terminaOperacion();
         return seguridad;
     }
       
+      public List<Object> Listar(String SQL) {
+        this.iniciaOperacion();
+        List<Object> listaResultados = session.createSQLQuery(SQL).list();
+        this.terminaOperacion();
+        return listaResultados;
+    }
+
+    public void guardarCliente(Cliente m) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

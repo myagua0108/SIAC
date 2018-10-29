@@ -1,0 +1,75 @@
+body{
+	background-color: #FF9800;
+	font-family: 'Amatic SC', cursive;
+
+}
+img{
+	max-width: 80%;
+}
+.quitar-float{
+	float: none;
+}
+.espacio-arriba{
+	margin-top: 100px;
+}
+.letra{
+	font-family: 'Indie Flower', cursive;
+}
+.tamano{
+ font-size: 4em;
+}
+.mediado{
+	font-size: 3em;
+}
+.pequeno{
+	font-size: 1em;
+}
+.negro{
+color: black;
+}
+.azul{
+	color: #2C3E50;
+}
+a{
+	font-size: 2em;
+	color: green;
+}
+
+.espacio-derecha{
+	margin-right: 1em;
+}
+.avata{
+	max-width: 30%;
+}
+.no-lista li{
+list-style-type: none;
+}
+.no-lista{
+	margin: 0px;
+	padding: 0px;
+}
+.se-gris{
+	background-color: #eee;
+}
+.padin-largo{
+	padding: 5px 10px;
+}
+.inline-block{
+	float: none;
+	display: inline-block;
+	margin-right: -4px;
+}
+.vete-arriba{
+	vertical-align: top;
+}
+
+.retraso-1{
+-webkit-animation-delay:1s;
+-moz-animation-delay:1s;
+animation-delay:1s;	
+}
+.retraso-2{
+-webkit-animation-delay:2s;
+-moz-animation-delay:2s;
+animation-delay:2s;	
+}

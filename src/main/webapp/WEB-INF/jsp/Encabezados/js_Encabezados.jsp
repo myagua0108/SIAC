@@ -1,0 +1,11 @@
+<script src="${pageContext.request.contextPath}/Public/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/Public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/Public/bower_components/fastclick/lib/fastclick.js"></script>
+<script src="${pageContext.request.contextPath}/Public/dist/js/adminlte.min.js"></script>
+<script src="${pageContext.request.contextPath}/Public/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<script src="${pageContext.request.contextPath}/Public/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="${pageContext.request.contextPath}/Public/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="${pageContext.request.contextPath}/Public/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="${pageContext.request.contextPath}/Public/bower_components/chart.js/Chart.js"></script>
+<script src="${pageContext.request.contextPath}/Public/dist/js/pages/dashboard2.js"></script>
+<script src="${pageContext.request.contextPath}/Public/dist/js/demo.js"></script>

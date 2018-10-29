@@ -1,10 +1,10 @@
-<link href="${pageContext.request.contextPath}/public/Inicio/css/bootstrap.min.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/public/Inicio/css/animate.min.css" rel="stylesheet"> 
-<link href="${pageContext.request.contextPath}/public/Inicio/css/font-awesome.min.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/public/Inicio/css/lightbox.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/public/Inicio/css/main.css" rel="stylesheet">
-<link id="css-preset" href="${pageContext.request.contextPath}/public/Inicio/css/presets/preset1.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/public/Inicio/css/responsive.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/Public/Inicio/css/bootstrap.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/Public/Inicio/css/animate.min.css" rel="stylesheet"> 
+<link href="${pageContext.request.contextPath}/Public/Inicio/css/font-awesome.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/Public/Inicio/css/lightbox.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/Public/Inicio/css/main.css" rel="stylesheet">
+<link id="css-preset" href="${pageContext.request.contextPath}/Public/Inicio/css/presets/preset1.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/Public/Inicio/css/responsive.css" rel="stylesheet">
 <%--
 [if lt IE 9]
    <script src="${pageContext.request.contextPath}/public/Inicio/js/html5shiv.js"></script>

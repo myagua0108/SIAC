@@ -18,6 +18,7 @@ public class Cliente  implements java.io.Serializable {
      private String direCli;
      private String telfCli;
      private String contCli;
+     private String camionruta;
      private Set prestamos = new HashSet(0);
      private Set despachos = new HashSet(0);
 
@@ -108,6 +109,14 @@ public class Cliente  implements java.io.Serializable {
     
     public void setDespachos(Set despachos) {
         this.despachos = despachos;
+    }
+
+    public String getCamionruta() {
+        return camionruta;
+    }
+
+    public void setCamionruta(String camionruta) {
+        this.camionruta = camionruta;
     }
 
 

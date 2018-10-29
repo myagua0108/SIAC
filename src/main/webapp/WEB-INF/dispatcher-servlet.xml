@@ -21,16 +21,48 @@
                 <prop key="Header_Bienvenida.htm">LoginController</prop>
                 <prop key="Js_Bienvenida.htm">LoginController</prop>
                 <prop key="Login.htm">LoginController</prop>
-                <!--
-                <prop key="Encabezado_Portal.htm">PortalController</prop>
-                <prop key="Footer_Portal.htm">PortalController</prop>
-                <prop key="Js_Portal.htm">PortalController</prop>
-                <prop key="Menu_Izquierdo_Portal.htm">PortalController</prop>
-                <prop key="Menu_Top_Portal.htm">PortalController</prop>
-                <prop key="Portal.htm">PortalController</prop>
-                <prop key="Plantilla_General.htm">PlantillaController</prop>
-               -->
-            </props>
+                <prop key="Encabezado_menu.htm">LoginController</prop>
+                
+                <!-- Administrator -->
+                
+                <prop key="Caja.htm">AdministratorController</prop>
+                <prop key="Cambio_Forma_Pago.htm">AdministratorController</prop>
+                <prop key="Cancelar.htm">AdministratorController</prop>
+                <prop key="Consulta_Clientes.htm">AdministratorController</prop>
+                <prop key="Consulta_Creditos.htm">AdministratorController</prop>
+                 <prop key="Consulta_Productos.htm">AdministratorController</prop>
+               <prop key="Consulta_Vacios.htm">AdministratorController</prop>
+               <prop key="Consulta_calculo_vale.htm">AdministratorController</prop>
+               <prop key="Consulta_financiamiento.htm">AdministratorController</prop>
+               <prop key="Devolucion.htm">AdministratorController</prop>
+               <prop key="Facturar.htm">AdministratorController</prop>
+               <prop key="Precio_Vacios.htm">AdministratorController</prop>
+               <prop key="Prestamo_Vacios.htm">AdministratorController</prop>
+               <prop key="Rebote.htm">AdministratorController</prop>
+               <prop key="Registro_Camion.htm">AdministratorController</prop>
+               <prop key="Registro_Clientes.htm">AdministratorController</prop>
+               <prop key="Registro_Empleado.htm">AdministratorController</prop>
+               <prop key="Registro_Producto.htm">AdministratorController</prop>
+               <prop key="Reporte_CargaVacios.htm">AdministratorController</prop>
+               <prop key="Reporte_camion.htm">AdministratorController</prop>
+               <prop key="Reporte_cheques_Devuelto.htm">AdministratorController</prop>
+               <prop key="Reporte_cliente.htm">AdministratorController</prop>
+               <prop key="Reporte_descargas_vacios.htm">AdministratorController</prop>
+               <prop key="Reporte_gastos.htm">AdministratorController</prop>
+               <prop key="Reporte_traslados.htm">AdministratorController</prop>
+               <prop key="Reporte_vacios.htm">AdministratorController</prop>
+               <prop key="Traslados.htm">AdministratorController</prop>
+               <prop key="Vacios_Prestados.htm">AdministratorController</prop>
+               <prop key="ahorro.htm">AdministratorController</prop>
+               <prop key="ajuste.htm">AdministratorController</prop>
+               <prop key="cambios.htm">AdministratorController</prop>
+               <prop key="descarga.htm">AdministratorController</prop>
+               <prop key="despacho.htm">AdministratorController</prop>
+               <prop key="gastos.htm">AdministratorController</prop>
+               <prop key="inventario.htm">AdministratorController</prop>
+               <prop key="recepcion.htm">AdministratorController</prop>
+               <prop key="vacios.htm">AdministratorController</prop>
+</props>
         </property>
     </bean>
     <bean id="viewResolver"
@@ -39,4 +71,5 @@
           p:suffix=".jsp" />
     <!--Controller -->
     <bean name="LoginController" class="com.solutionsDevelopers.Controller.LoginController" />
+    <bean name="AdministratorController" class="com.solutionsDevelopers.Controller.AdministratorController" />
 </beans>

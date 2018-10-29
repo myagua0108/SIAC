@@ -60,7 +60,7 @@ public class LoginController {
             Seguridad seg = MetH.buscarUsuario(segTemp);
             if (seg != null) 
             {
-                mav.setViewName("redirect:/Bienvenida.htm");
+                mav.setViewName("redirect:/Encabezado_menu.htm");
             }
             return mav;
         }
@@ -74,5 +74,14 @@ public class LoginController {
         mav.setViewName("Login/Bienvenida");
         return mav;
     }
+    
+    /// Method Get for Login
+       @RequestMapping(value = "Encabezado_menu.htm", method = RequestMethod.GET)
+    public ModelAndView EncabezadoGet() {
+        //mav.addObject("Seguridad", new Seguridad());
+        mav.setViewName("Encabezados/Encabezado_menu");
+        return mav;
+    }
+    
     
 }

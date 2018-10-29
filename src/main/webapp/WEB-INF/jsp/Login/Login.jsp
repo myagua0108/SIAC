@@ -9,7 +9,7 @@
         <body>
         <div id="loginbox">   
             <form:form class="form-vertical" commandName="Seguridad" method="post">
-                <div class="control-group normal_text"> <h3><img src="${pageContext.request.contextPath}/public/Administrador/img/logo.png" alt="Logo" /></h3></div>
+                <div class="control-group normal_text"> <h3><img src="${pageContext.request.contextPath}/Public/Administrador/img/logo.png" alt="Logo" /></h3></div>
                 <div class="control-group">
                     <form:errors path="*" element="div" cssClass="alert alert-danger"/> 
                 </div>
@@ -33,8 +33,8 @@
                 </div>
             </form:form>
         </div>
-        <script src="${pageContext.request.contextPath}/public/Administrador/js/jquery.min.js"></script>  
-        <script src="${pageContext.request.contextPath}/public/Administrador/js/matrix.login.js"></script> 
+        <script src="${pageContext.request.contextPath}/Public/Administrador/js/jquery.min.js"></script>  
+        <script src="${pageContext.request.contextPath}/Public/Administrador/js/matrix.login.js"></script> 
     </body>
 
 </html>
